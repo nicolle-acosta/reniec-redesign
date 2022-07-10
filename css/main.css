@@ -312,3 +312,18 @@ input, select{
 h1, h3{
     margin: 10px 0;
 }
+
+/*indocumentadas 2*/
+
+.servindoc:hover .hide{
+    cursor: pointer;
+    display: block;
+}
+
+.text-naranja{
+    width: 80% 0;
+    margin: 20px;
+    background-color: #FFF;
+    color: #FF9933;
+    font-weight: bold;
+}

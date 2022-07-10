@@ -42,7 +42,7 @@
             <div class="contenedor-formulario">
                 <form action="" class="formulario">
                     <fieldset>
-                        <legend>Persona indocumentada</legend>
+                        <legend>Persona de contacto</legend>
                         <div class="juntar-input">
                             <div class="campo">
                                 <label>Nombres</label>
@@ -52,52 +52,62 @@
                                 <label>Apellido paterno</label>
                                 <input type="text" placeholder="Apellido paterno">
                             </div>
+                            <div class="campo">
+                                <label>Apellido materno</label>
+                                <input type="text" placeholder="Apellido materno">
+                            </div>
                         </div>
 
-                        <div class="campo">
-                            <label>Apellido materno</label>
-                            <input type="text" placeholder="Apellido materno">
-                        </div>
-                        <div class="campo">
-                            <label>¿Tiene algun documento que lo identifique?</label>
-                            <select name="" id="">
-                                <option selected>Elige una opcion</option>
-                                <option value="1">si</option>
-                                <option value="2">no</option>
-                            </select>
+                        <div class="juntar-input">
+                            <div class="campo">
+                                <label>Numero de DNI</label>
+                                <input type="number" placeholder="Numero de DNI">
+                            </div>
+                            <div class="campo">
+                                <div class="servindoc">
+                                    <div class="show">
+                                        <label>Fecha de emision de DNI (dia/mes/año)</label>
+                                        <input type="date">
+                                    </div>
+                                    <div class="hide">
+                                        <div class="text-naranja">
+                                            <p>Ubica la "fecha de emision" de tu DNI / DNIs</p>
+                                            <img src="/src/img/fechadeEmision.png" alt="aquivaimagen">
+                                            <p>Estimado ciudadano, ingrese al registro de su telefono y correo
+                                                electronico. Ambos datos de contacto deben ser datos existentes para una
+                                                mejor comunicacion con la persona registrada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="campo">
+                                <label>Telefono</label>
+                                <input type="number" placeholder="Numero de celular">
+                            </div>
                         </div>
                         <div class="juntar-input">
                             <div class="campo">
-                                <label>¿Conoce su fecha de nacimiento?</label>
-                                <select name="" id="">
-                                    <option selected>Elige una opcion</option>
-                                    <option value="1">si</option>
-                                    <option value="2">no</option>
-                                </select>
+                                <label>Telefono 2</label>
+                                <input type="number" placeholder="Opcional">
                             </div>
                             <div class="campo">
-                                <label>Fecha de nacimiento (dia/mes/año)</label>
-                                <input type="date">
+                                <label>Correo electronico</label>
+                                <input type="email" placeholder="ejemplo@gmail.com">
                             </div>
                         </div>
 
                     </fieldset>
-                    <div class="btn-centrar">
-                        <a href="#" class="btn">Continuar</a>
+                    <div class="juntar-input">
+                        <div class="btn-centrar">
+                            <a href="/pages/indocumentadas.html" class="btn">Regresar</a>
+                        </div>
+                        <div class="btn-centrar">
+                            <a href="#" class="btn">Continuar</a>
+                        </div>
                     </div>
-                </form>
 
-                <div class="info-persona-indoc">
-                    <h3>¿Quién se considera una persona indocumentada?</h3>
-                    <ul>
-                        <li>Que nunca fue registrada su Acta de Nacimiento.</li>
-                        <li>Que nunca ha contado con un DNI.</li>
-                        <li>Que cuenta con Acta de Nacimiento, pero nunca tramitó su DNI.</li>
-                        <li>Que cuenta con Acta de Nacimiento con error, y no ha podifo obtener su DNI.</li>
-                        <li>Que cuenta con Libreta Electoral, pero nunca tramitó su DNI.</li>
-                    </ul>
-                    <img src="/src/img/aquivaimagen.webp" alt="asd">
-                </div>
+                </form>
             </div>
             <div class="parrafo">
                 <p>Estimado Usuario <br>

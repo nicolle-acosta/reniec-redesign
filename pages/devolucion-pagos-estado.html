@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolución de Pagos</title>
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+    <header class="navbar">
+        <a href="#"><img class="logo" src="../src/img/logo.png" alt="Logo RENIEC"></a>
+        <ul class="nav-items">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios Online</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="devolucion-pagos-estado">
+            <div class="left">
+                <form action="#">
+                    <div>
+                        <h1>ESTADO DE SOLICITUD</h1>
+                    </div>
+                    <div>
+                        <label class="label" for="tipo_persona">Tipo de Persona</label>
+                        <div class="tipo-persona">
+                            <input type="radio" id="natural" name="tipo_persona" value="Natural">
+                            <label for="natural">Natural</label>
+                            <input type="radio" id="juridica" name="tipo_persona" value="Juridica">
+                            <label for="juridica">Juridica</label>
+                        </div>
+        
+                    </div>
+                    <div>
+                        <label class="label" for="dni">DNI - Dígito de verificación</label>
+                        <div class="dni">
+                            <input type="text">
+                            <p>-</p>
+                            <input type="text">
+                        </div>
+        
+                    </div>
+                    <div>
+                        <label class="label" for="fecha">Fecha de Emisión</label>
+                        <input type="date">
+                    </div>
+                </form>
+            </div>
+            <div class="right">
+                <p>Si tienes DNI físico, encontrarás la fecha de emisión en la parte derecha.</p>
+                <img width="234px" src="../src/img/devolucion-pagos-main-dni.png" alt="Fecha de Emision - DNI">
+                <p>Si tienes DNI electrónico, encontrarás la fecha de emisión en la parte izquierda (Ver A). Si tienes la nueva
+                    versión del DNI electrónico (2020), encontrarás la fecha de emisión en la parte inferior derecha (Ver B).
+                </p>
+                <div class="dni-electronico">
+                    <img width="234px" src="../src/img/devolucion-pagos-main-A.png" alt="DNI - Electrónico">
+                    <img width="234px" src="../src/img/devolucion-pagos-main-B.png" alt="DNI - Electrónico">
+                </div>
+            </div>
+        </div>
+        <div class="botones">
+            <a class="btn-secondary" href="../pages/devolucion-pagos-main.html">REGRESAR</a>
+            <a class="btn-primary" href="#">LIMPIAR DATOS</a>
+            <a class="btn-primary" href="">SIGUIENTE</a>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="enlaces">
+                <ul class="lista-enlaces">
+                    <li><a href="#">Servicios Online</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Sobre Nostros</a></li>
+                </ul>
+                <ul class="lista-enlaces">
+                    <li><a href="#">Ubicanos</a></li>
+                    <li><a href="#">Nuestros Horarios</a></li>
+                    <li><a href="#">Libro de reclamaciones</a></li>
+                </ul>
+            </div>
+            <img src="/src/img/logo.png" alt="aquivaimagen">
+        </div>
+        <p>Registro Nacional de Identificacion y Estado Civil © 2022 . RENIEC</p>
+    </footer>
+    
+</body>
+</html>

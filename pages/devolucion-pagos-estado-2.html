@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolución de Pagos</title>
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+    <header class="navbar">
+        <a href="#"><img class="logo" src="../src/img/logo.png" alt="Logo RENIEC"></a>
+        <ul class="nav-items">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios Online</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="devolucion-pagos-estado-2">
+            <form action="#">
+                <label class="label label-title" for="forma_pago">FORMA DE PAGO</label>
+                <div>
+                    <label class="label" for="nacion">Recibo de pago del Banco de la Nación</label>
+                    <input type="radio" id="nacion" name="forma_pago" value="Nacion">
+                    <img src="../src/img/bn.png" alt="Banco de la Nación">
+                    <label class="label" for="bcp">Recibo de pago del Banco de de Crédito del Perú</label>
+                    <input type="radio" id="bcp" name="forma_pago" value="BCP">
+                    <img src="../src/img/bcp.png" alt="Banco de Crédito del Perú">
+                    <label class="label" for="tarjeta">Recibo de pago con Tarjeta</label>
+                    <input type="radio" id="tarjeta" name="forma_pago" value="Tarjeta">
+                    <img src="../src/img/tarjeta.png" alt="Tarjeta">
+                    <label class="label" for="pvm">Plataforma Virtual Multiservicio PVM</label>
+                    <input type="radio" id="pvm" name="forma_pago" value="PVM">
+                    <img src="../src/img/pvm.png" alt="PVM">
+                </div>
+                
+            </form>
+        </div>
+        <div class="botones">
+            <a class="btn-secondary" href="../pages/devolucion-pagos-estado.html">REGRESAR</a>
+            <a class="btn-primary" href="#">LIMPIAR DATOS</a>
+            <a class="btn-primary" href="">SIGUIENTE</a>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="enlaces">
+                <ul class="lista-enlaces">
+                    <li><a href="#">Servicios Online</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Sobre Nostros</a></li>
+                </ul>
+                <ul class="lista-enlaces">
+                    <li><a href="#">Ubicanos</a></li>
+                    <li><a href="#">Nuestros Horarios</a></li>
+                    <li><a href="#">Libro de reclamaciones</a></li>
+                </ul>
+            </div>
+            <img src="/src/img/logo.png" alt="aquivaimagen">
+        </div>
+        <p>Registro Nacional de Identificacion y Estado Civil © 2022 . RENIEC</p>
+    </footer>
+    
+</body>
+</html>

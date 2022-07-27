@@ -505,3 +505,31 @@ h1, h3{
 .devolucion-pagos-estado-2 input{
     height: fit-content;
 }
+/*devolucion-pagos-estado-final*/
+.devolucion-pagos-estado-final{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    max-width: 1140px;
+    gap: 30px;
+    background-color: #E5E5E5;
+    padding: 2rem;
+    position: relative;
+}
+.devolucion-pagos-estado-final div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.devolucion-pagos-estado-final form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+.devolucion-pagos-estado-final .check{
+    position: absolute;
+    left: 800px;
+    top: 160px;
+}

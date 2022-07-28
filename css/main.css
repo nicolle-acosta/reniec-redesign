@@ -21,23 +21,21 @@ body{
 .navbar{
     background-color: var(--main);
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 20px 40px;
-} 
+    padding: 0 40px;
+}
 .navbar .logo{
     margin: 20px 0;
-    height: 100px;
-} 
-.navbar ul{
+    height: 120px;
+}
+.nav-items{
     display: flex;
-    flex-direction: column;
     text-decoration: none;
     list-style: none;
     width: 60%;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
+    margin-top: 70px;
 } 
 .navbar li a{
     text-decoration: none;
@@ -47,18 +45,64 @@ body{
 } 
 .navbar li:hover{
     text-decoration:underline;
-} 
-@media (min-width: 780px) {
-    .navbar{
-        flex-direction: row;
+}
+.logo-icono{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-icono img{
+    margin-top: 30px;
+}
+.mostrar-menu{
+    display: none;
+}
+
+@media (max-width: 1280px) {
+    .navbar .logo{
+        height: 85px;
     }
-    .navbar ul{
-        flex-direction: row;
+    .nav-items{
+        width: 70%;
     } 
 }
-@media (min-width: 1080) {
-    
+@media (max-width: 768px) {
+    .navbar{
+        padding-left: 10px;
+    }
+    .nav-items{
+        margin-top: 40px;
+    } 
+    .navbar li a{
+        font-size: 15px;
+    } 
+    .navbar .logo{
+        margin-left: 5px;
+        height: 65px;
+    }
 }
+@media (max-width: 550px) {
+    .mostrar-menu{
+        display: inline;
+    }
+    .navbar{
+        flex-direction: column;
+        padding: 0px 10px;
+    }
+    .nav-items{
+        display: none;
+    }
+    .mostrar-nav-items{
+        display: flex;
+        margin-top: 0;
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar li{
+        margin: 8px;
+    }
+}
+
 /*SERVICIOS*/
 .seccion{
     margin: 20px 0;
@@ -83,43 +127,43 @@ body{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 16px;
-    width: min(90%, 900px);
+    width: min(90%, 1200px);
     background-color: var(--main);
     padding: 30px;
     margin: 16px 0px;
 }
 .contenedor-servicios h3{
-    width: min(90%, 900px);
+    width: min(90%, 1200px);
     text-align: left;
 }
 .servicio{
     background-color: #A1A1A1;
-    padding: 16px;
-    height: 220px;
+    padding: 20px;
+    height: 230px;
 }
 .show{
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 .show img{
-    height: 220px;
+    height: 140px;
+    width: 100%;
 }
 .nombre-servicio{
     margin: 15px 0;
 }
 .btn-alinear-derecha{
-    width: min(90%, 900px);
+    width: min(90%, 1200px);
     display: flex;
     flex-direction: row;
     justify-content: end;
 }
 .btn-ver-todos{
     background-color: #179C64;
-    width: 120px;
-    padding: 10px;
+    width: 170px;
+    padding: 15px;
     text-decoration: none;
     text-align: center;
     color: #FFFF;
@@ -128,9 +172,7 @@ body{
 .btn-ver-todos:hover{
     background-color: #000;
 }
-.hide{
-    display: none;
-}
+
 .servicio:hover .hide{
     cursor: pointer;
     display: block;
@@ -139,6 +181,38 @@ body{
     cursor: pointer;
     display: none;
 }
+@media (max-width: 768px) {
+    .show img{
+        height: 130px;
+    }
+    .servicios-tipo-publico{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .servicios-tipo-publico .direccionar-servicios:last-child{
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    .servicios-tipo-publico{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .servicios-tipo-publico .direccionar-servicios:nth-last-child(2){
+        display: none;
+    }
+}
+@media (max-width: 480px) {
+    .show img{
+        height: 150px;
+    }
+    .servicios-tipo-publico{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .servicios-tipo-publico .direccionar-servicios:nth-last-child(2){
+        display: none;
+    }
+}
+
+
 
 
 
@@ -179,12 +253,298 @@ footer p{
     width: 180px;
 }
 
+/*Page todos los servicios*/
+.servicios-all{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 16px;
+    width: min(90%, 1200px);
+    background-color: var(--main);
+    padding: 30px;
+    margin: 16px 0px;
+}
+@media (max-width: 1080px) {
+    .servicios-all{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media (max-width: 768px) {
+    .servicios-all{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 550px) {
+    .servicios-all{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .servicio{
+        width: min(320px,95%);
+        margin: 0 auto;
+    }
+}
+
+/*SERVICIO-CONSULTAR ESTADO DNI*/
+
+/*MODAL DEL ESTADO*/
+.modal {
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.animate {
+    text-align: center;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+} 
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+.contenedor-modal{
+    width: min(700px,90%);
+    margin: 0 auto;
+    margin-top: 150px;
+    background-color: #D9D9D9;
+    padding: 30px;
+}
+.closeModal{
+    display: block;
+    text-align:right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.closeModal:hover{
+    cursor: pointer;
+}
+.mensaje-estado{
+    font-size: 28px;
+    margin: 20px auto;
+    text-align: center;
+}
+.estado{
+    padding: 30px;
+    background-color: #179C64;
+    margin: 40px auto;
+    width: 300px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.sin-estado{
+    padding: 30px;
+    background-color:#6b0000;
+    margin: 40px auto;
+    width: auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+/*----------------*/
+.main-consultar{
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seccion-consultar{
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+.consultar-contenido{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 80px;
+}
+.consultar-informacion{
+    background-color: #636262;
+    margin: 30px auto;
+    width: min(90%,800px);
+    padding: 15px;
+    color: #000;
+    font-weight: bold;
+}
+.consultar-contenedor{
+    background-color: #D9D9D9;
+    width: min(80%,900px);
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 20px 60px;
+}
+.consultar-contenedor h3{
+    margin-bottom: 30px;
+    color: #000;
+}
+.consultar-img{
+    position: relative;
+}
+.consultar-img p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.4);
+    color: #FFF;
+}
+.salto-linea{
+    display: block;
+}
+.consultar-img img{
+    width: 100%;
+    filter: opacity(65%);
+}
+.consultar{
+    text-align: center;
+}
+.btn-general{
+    background-color: #000;
+    color: #FFF;
+    text-decoration: none;
+    padding: 15px 70px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+.btn-general:hover{
+    background-color: #179C64;
+    color: #000;
+}
+.btn-secundario{
+    background-color: #9c0101;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 70px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px 0;
+}
+.btn-secundario:hover{
+    background-color: #6b0000;
+    color: #FFF;
+}
+.btn-principal{
+    background-color:#179C64;
+    color: #000;
+    text-decoration: none;
+    padding: 15px 70px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 10px 0;
+}
+.btn-principal:hover{
+    background-color:#0b462d;
+    color: #FFF;
+}
+.contenedor-tipo-consulta{
+    width: min(95%,1500px);
+    margin: 10PX auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.tipo-consulta{
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    width: 90%;
+    margin:  0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contenido-tipo-consulta{
+    display: grid;
+    grid-template-columns: 1.4fr .6fr;
+    padding: 30px 60px 0px 60px;
+}
+.contenido-tipo-consulta img{
+    width: 100%;
+
+}
+.tipo-consulta label{
+    margin: 10px 0px 5px 20px;
+    display: block;
+}
+.tipo-consulta input{
+    margin: 0 20px;
+    display: block;
+    width: 65%;
+    border: none;
+    background-color: #D9D9D9;
+    border-bottom: rgb(88, 88, 88) solid 1px;
+    height: 10px;
+    padding: 10px;
+    outline: none;
+}
+.centrar-verticalmente{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.estados{
+    width: 80%;
+}
+.tabla{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+caption{
+    margin: 10px 0;
+}
+td{
+    padding: 5px 16px;
+}
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+.campo-obligatorio-consulta{
+    color: red;
+    margin-left: 25px;
+}
+
+@media (max-width: 768px) {
+    .main-consultar{
+        height: auto;
+    }
+    .consultar-contenido{
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .contenedor-tipo-consulta{
+        grid-template-columns: 1fr;
+    }
+    .estados{
+        margin: 0 auto;
+    }
+}
+
 /*personas indocumentadas*/
 
 .contenedor-formulario{
-    width: min(90%, 1100px);
+    width: min(95%, 1100px);
     display: flex;
     gap: 40px;
+    margin-top: 10px;
 }
 
 .secc1{
@@ -198,25 +558,17 @@ legend{
 }
 
 .formulario{
+    width: 100%;
     padding: 30px;
+    padding-bottom: 10px;
     background-color: #E5E5E5;
-}
-
-.btn{
-    background-color: #000;
-    width: 120px;
-    margin: 40px 0;
-    padding: 10px 45px; 
-    text-decoration: none;
-    text-align: center;
-    color: #FFFF;
-    border-radius: 20px;
+    margin-bottom: 40px;
 }
 
 .btn-centrar{
     width: 100%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 5px;
 }
 
 .btn:hover{
@@ -224,15 +576,17 @@ legend{
 }
 
 .formulario fieldset{
-    border: #E5E5E5 solid 1px;
-    margin-bottom: 20px;
-}
+    border: #E5E5E5 solid 0px;
 
+}
+fieldset.fieldset-section{
+    border: #FFF solid 1px;
+    padding: 10px;
+}
 .info-persona-indoc{
     width: 450px;
     background-color: #FFF9D9;
     padding: 25px;
-    
 }
 
 .info-persona-indoc img{
@@ -245,20 +599,47 @@ legend{
 .info-persona-indoc li{
     margin: 9px 15px;
 }
+.campo-oligatorio{
+    color: red;
+    margin-left: 10px;
+}
 
 input, select{
     height: 35px;
     padding: 5px;
     width: 300px;
 }
-
 .juntar-input{
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.segund{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+@media (max-width: 1080px) {
+    .segund{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:768px) {
+    .segund{
+        grid-template-columns: 1fr;
+    }
+}
+.juntar-input.juntos{
+    grid-row: 4;
+    grid-column: 1/4;
+    margin: 0 auto;
     display: flex;
-    gap: 45px;
 }
 
 .formulario label{
     display: block;
+    width: auto;
     margin: 10px 0;
 }
 
@@ -301,6 +682,13 @@ input, select{
     background-color: #FFF;
     border: #E5E5E5 solid 1px;
 }
+.dot:hover{
+    cursor: pointer;
+}
+.dot.active{
+    background-color: #A1A1A1;
+    color: #000;
+}
 
 .parrafo{
     margin: 30px 0;
@@ -314,21 +702,120 @@ input, select{
 h1, h3{
     margin: 10px 0;
 }
-
-/*indocumentadas 2*/
-
+@media (max-width:768px) {
+    .contenedor-pasos h3{
+        font-size: 18px;
+    }
+    .dot{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .contenedor-dot{
+        gap: 5px;
+    }
+    .contenedor-dot p{
+        width: 140px;
+        font-size: 13px;
+    }
+    .contenedor-formulario{
+        width: 80%;
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+    .info-persona-indoc{
+        width: auto;
+        padding: 15px;
+        margin-top: 18px;
+    }
+    .info-persona-indoc h3{
+        margin-top: 0;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .info-persona-indoc ul{
+        font-size: 14px;
+        margin-left: 10px   ;
+    }
+    
+    .formulario .juntar-input{
+        display: block;
+    }
+    .campo{
+        display: flex;
+        flex-direction: column;
+    }
+    input, select{
+        width: 100%;
+    }
+}
+@media (max-width:550px) {
+    .contenedor-pasos h3{
+        font-size: 16px;
+    }
+    .dot{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .contenedor-dot{
+        gap: 2px;
+    }
+    .contenedor-dot p{
+        width: 90px;
+        font-size: 1px;
+    }
+    .juntar-input.juntos{
+        flex-direction: column;
+    }
+}
 .servindoc:hover .hide{
-    cursor: pointer;
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-naranja{
-    width: 80% 0;
     margin: 20px;
     background-color: #FFF;
     color: #FF9933;
     font-weight: bold;
 }
+.text-naranja img{
+    width: 100%;
+}
+.datos-confirmacion{
+    color: red;
+    text-align: right;
+}
+.juntar-texto{
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+}
+
+.final{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+}
+@media (max-width:768px) {
+    .final{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
+.formulario .hide{
+    display: none;
+}
+
+.hide{
+    display: none;
+}
+
+
 /*devolucion-pagos-main*/
 .devolucion-pagos-main{
     display: flex;

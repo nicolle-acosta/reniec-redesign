@@ -6,84 +6,245 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDOCUMENTADAS</title>
+    <link rel="preload" href="/css/normalize.css" as="style">
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css" />
 </head>
 
 <body class="index">
     <header class="navbar">
-        <a href="#"><img class="logo" src="/src/img/logo.png" alt="Logo RENIEC"></a>
+        <div class="logo-icono">
+            <a href="#"><img class="logo" src="../src/img/logo.png" alt="Logo RENIEC"></a>
+            <span class="mostrar-menu"><img src="/src/img/lista.png" style="width: 30px;" alt=""></span>
+        </div>
         <ul class="nav-items">
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios Online</a></li>
+            <li><a href="/">Servicios Online</a></li>
             <li><a href="#">Contacto</a></li>
             <li><a href="#">Preguntas Frecuentes</a></li>
         </ul>
     </header>
     <main>
+        <div class="modal hide">
+            <div class="contenedor-modal">
+                <span class="closeModal">&times</span>
+                <div class="animate">
+                    <p class="estado">Se han registrado correctamente los datos ingresados</p>
+                    <a href="/index.html" class="btn-secundario">Regresar</a>
+                </div>
+            </div>
+        </div>
         <section class="secc1">
             <h1 class="texto-principal">Registro de personas indocumentadas</h1>
             <div class="contenedor-pasos">
                 <h3>Registro de personas sin DNI o indocumentadas</h3>
                 <div class="contenedor-dot">
                     <div>
-                        <div class="dot">1</div>
-                        <p class="active">Registro de la persona indocumentada</p>
+                        <div class="dot active">1</div>
+                        <p class="dot-info active">Registro de la persona indocumentada</p>
                     </div>
                     <div>
                         <div class="dot">2</div>
-                        <p>Registro de la persona de contacto</p>
+                        <p class="dot-info">Registro de la persona de contacto</p>
                     </div>
                     <div>
                         <div class="dot">3</div>
-                        <p>Verificación de datos</p>
+                        <p class="dot-info">Verificación de datos</p>
                     </div>
                 </div>
             </div>
+            <div class="parrafo confirmacion hide">
+                <p>Estimado Usuario <br>
+                    Si está conforme con los datos registrados, sírvase seleccionar el botón Registrar, 
+                    caso contrario presione el botón Regresar para poder modificar los datos ingresados.</p>
+            </div>
             <div class="contenedor-formulario">
                 <form action="" class="formulario">
-                    <fieldset>
+                    <fieldset class="paso 1">
                         <legend>Persona indocumentada</legend>
                         <div class="juntar-input">
                             <div class="campo">
                                 <label>Nombres</label>
-                                <input type="text" placeholder="Nombres completos">
+                                <input class="obligatorio" type="text" name="nombresIndo" placeholder="Nombres completos">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
                             </div>
                             <div class="campo">
                                 <label>Apellido paterno</label>
-                                <input type="text" placeholder="Apellido paterno">
+                                <input class="obligatorio" type="text" name="apellidoPIndo" placeholder="Apellido paterno">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
                             </div>
                         </div>
 
                         <div class="campo">
                             <label>Apellido materno</label>
-                            <input type="text" placeholder="Apellido materno">
+                            <input class="obligatorio" type="text" name="apellidoMIndo" placeholder="Apellido materno">
+                            <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
                         </div>
                         <div class="campo">
                             <label>¿Tiene algun documento que lo identifique?</label>
-                            <select name="" id="">
-                                <option selected>Elige una opcion</option>
-                                <option value="1">SI</option>
-                                <option value="2">NO</option>
+                            <select class="obligatorio" name="tieneDoc" id="">
+                                <option value="" selected>Elige una opcion</option>
+                                <option value="Si">SI</option>
+                                <option value="No">NO</option>
                             </select>
+                            <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
                         </div>
                         <div class="juntar-input">
                             <div class="campo">
                                 <label>¿Conoce su fecha de nacimiento?</label>
-                                <select name="" id="">
-                                    <option selected>Elige una opcion</option>
-                                    <option value="1">SI</option>
-                                    <option value="2">NO</option>
+                                <select class="obligatorio" name="conoceFecha" id="">
+                                    <option value="" selected>Elige una opcion</option>
+                                    <option value="Si">SI</option>
+                                    <option value="No">NO</option>
                                 </select>
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
                             </div>
                             <div class="campo">
                                 <label>Fecha de nacimiento (dia/mes/año)</label>
-                                <input type="date">
+                                <input class="obligatorio" type="date" name="fechaNac">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
                             </div>
                         </div>
-
+                        <div class="btn-centrar">
+                            <a href="#" class="btn-general continuar">Continuar</a>
+                        </div>
                     </fieldset>
-                    <div class="btn-centrar">
-                        <a href="/pages/indocumentadas2.html" class="btn">Continuar</a>
+                    <div class="paso 2 hide">
+                        <legend>Persona de contacto</legend>
+                        <div class="segund">
+                            <div class="campo">
+                                <label>Nombres</label>
+                                <input class="obligatorio" type="text" name="nombres" placeholder="Nombres completos">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                            </div>
+                            <div class="campo">
+                                <label>Apellido paterno</label>
+                                <input class="obligatorio" type="text" name="apellidoP"  placeholder="Apellido paterno">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                            </div>
+                            <div class="campo">
+                                <label>Apellido materno</label>
+                                <input class="obligatorio" type="text" name="apellidoM"  placeholder="Apellido materno">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                            </div>
+    
+                            <div class="campo">
+                                <label>Numero de DNI</label>
+                                <input class="obligatorio" type="number" name="numDNI"  placeholder="Numero de DNI">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                            </div>
+                            <div class="campo">
+                                <div class="servindoc">
+                                    <div class="show">
+                                        <label>Fecha de emision de DNI (dia/mes/año)</label>
+                                        <input class="obligatorio" type="date" name="fechaEmision" >
+                                        <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                                    </div>
+                                    <div class="text-naranja hide">
+                                            <p>Ubica la "fecha de emision" de tu DNI / DNIs</p>
+                                        <img src="/src/img/fotodeEmision.png" alt="aquivaimagen">
+                                        <p>Estimado ciudadano, ingrese al registro de su telefono y correo
+                                                    electronico. Ambos datos de contacto deben ser datos existentes para una
+                                                    mejor comunicacion con la persona registrada</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="campo">
+                                <label>Telefono</label>
+                                <input class="obligatorio" type="number" name="telefono1"  placeholder="Numero de celular">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                            </div>
+                            <div class="campo">
+                                <label>Telefono 2</label>
+                                <input type="number" name="telefono2" placeholder="Opcional">
+                            </div>
+                            <div class="campo">
+                                <label>Correo electronico</label>
+                                <input class="obligatorio" type="email" name="correo" placeholder="ejemplo@gmail.com">
+                                <p class="campo-oligatorio hide">*Este campo es obligatorio</p>
+                            </div>
+                        </div>
+                        <div class="juntar-input juntos">
+                            <div class="btn-centrar">
+                                <a href="#" class="btn-secundario regresar">Regresar</a>
+                            </div>
+                            <div class="btn-centrar">
+                                <a href="#" class="btn-general continuar">Continuar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso hide columnas">
+                        <fieldset class="fieldset-section">
+                            <h3>Datos de la persona indocumentada</h3>
+                            <div class="juntar-texto">
+                               <label for="">Prenombre</label>
+                               <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Primer Apellido</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Segundo Apellido</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Dispone de Documento de Identidad?</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Conoce su Fecha de Nacimiento</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Fecha de Nacimiento</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-section">
+                            <h3>Datos de la persona de Contacto</h3>
+                            <div class="juntar-texto">
+                                <label for="">Prenombre</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Primer Apellido</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Segundo Apellido</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">DNI</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Fecha Emision</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Telefono 1</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Telefono 2</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                            <div class="juntar-texto">
+                                <label for="">Correo Electronico</label>
+                                <p class="datos-confirmacion">Sin especificar</p> 
+                            </div>
+                        </fieldset>
+                        <div class="juntar-input juntos">
+                            <div class="btn-centrar">
+                                <a href="#" class="btn-secundario regresar">Regresar</a>
+                            </div>
+                            <div class="btn-centrar">
+                                <a href="#" class="btn-principal registrar">Registrar</a>
+                            </div>
+                        </div>
                     </div>
                 </form>
 
@@ -99,7 +260,7 @@
                     <img src="/src/img/aquivaimagen.webp" alt="asd">
                 </div>
             </div>
-            <div class="parrafo">
+            <div class="parrafo help">
                 <p>Estimado Usuario <br>
                     Si necesita orientación sobre los datos a registrar, llame al Aló Reniec, al 0800 11 040 o a la
                     Agencia Digital, a los teléfonos (01) 315-4000, (01) 31527000, anexos 3000, 4000, 5000, 6000.</p>
@@ -112,7 +273,7 @@
                 <ul class="lista-enlaces">
                     <li><a href="#">Servicios Online</a></li>
                     <li><a href="#">Preguntas Frecuentes</a></li>
-                    <li><a href="#">Sobre Nostros</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
                 </ul>
                 <ul class="lista-enlaces">
                     <li><a href="#">Ubicanos</a></li>
@@ -124,6 +285,7 @@
         </div>
         <p>Registro Nacional de Identificacion y Estado Civil © 2022 . RENIEC</p>
     </footer>
+    <script src="/js/main.js"></script>
 </body>
 
 </html>

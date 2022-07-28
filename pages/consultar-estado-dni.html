@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RENIEC</title>
+    <link rel="stylesheet" href="/css/main.css" />
+</head>
+<body class="index">
+    <header class="navbar">
+        <div class="logo-icono">
+            <a href="#"><img class="logo" src="../src/img/logo.png" alt="Logo RENIEC"></a>
+            <span class="mostrar-menu"><img src="/src/img/lista.png" style="width: 30px;" alt=""></span>
+        </div>
+        <ul class="nav-items">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/">Servicios Online</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+    </header>
+    <main class="main-consultar">
+        <div class="modal hide">
+            <div class="contenedor-modal">
+                <span class="closeModal">&times</span>
+                <div class="animate">
+                    <h3 class="mensaje-estado">El estado del tramite para el DNI 76543210 es:</h3>
+                    <p class="estado">EN PROCESO</p>
+                    <a href="/index.html" class="btn-secundario">Regresar</a>
+                </div>
+            </div>
+        </div>
+        <section class="seccion-consultar">
+            <h2 class="centrar-texto">Consultar Estado del Tramnite del DNI</h2>
+            <div class="consultar-informacion">
+                <p>Estimado ciudadano,</p>
+                <p>Este servicio le permite consultar el estado del trámite de su DNI en cualquier momento del día, incluso hasta 1 mes después de efectuada la entrega.</p>
+            </div>
+            <div class="consultar-contenedor">
+                <h3>Seleccione una opcion para continuar:</h3>
+                <div class="consultar-contenido">
+                    <div class="consultar 1">
+                        <div class="consultar-img">
+                            <img src="/src/img/img_dni.webp" alt="consultar por dni">
+                            <p> Consulta por:<span class="salto-linea"></span>
+                                Documento Nacional
+                                de Identificacion - DNI</p>
+                        </div>
+                        <a href="#" id="" class="btn-general btn-consultar">Consultar</a>
+                    </div>
+                    <div class="consultar 2">
+                        <div class="consultar-img">
+                            <img src="/src/img/img_dni.webp" alt="consultar por dni">
+                            <p> Consulta por:<span class="salto-linea"></span>
+                                Ficha Registral/Nro. Solicitud Web</p>
+                        </div>
+                        <a href="#" id="" class="btn-general btn-consultar">Consultar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contenedor-tipo-consulta hide">
+                <div class="tipo-consulta 1 hide">
+                    <div class="contenido-tipo-consulta">
+                        <div class="centrar-verticalmente">
+                            <h4>Consulta por DNI:</h4>
+                            <label for="dni">*Numero de DNI</label>
+                            <input type="text" name="dni" id="dni" placeholder="Ingrese Numero de DNI">
+                            <p class="campo-obligatorio-consulta hide">*Este campo es obligatorio</p>
+                        </div>
+                        <img src="/src/img/id-card.png" alt="">
+                    </div>
+                    <div class="centrar-texto">
+                        <a href="#" id="" class="btn-general realizar-consulta">Consultar</a>
+                        <a href="#" id="" class="btn-secundario cancelar">Regresar</a>
+                    </div>
+                </div>
+                <div class="tipo-consulta hide">
+                    <div class="contenido-tipo-consulta">
+                        <div class="centrar-verticalmente">
+                            <h4>Consulta por Ficha Registral/ <span class="salto-linea"></span> Nro. Solicitud Web:</h4>
+                            <label for="ficha">*Numero de Ficha o Solicitud</label>
+                            <input type="text" name="ficha" id="ficha" placeholder="Ingrese Numero de Ficha o Solicitud">
+                            <p class="campo-obligatorio-consulta hide">*Este campo es obligatorio</p>
+                        </div>
+                        <img src="/src/img/DNI_azul_Codigo_Ficha.png" alt="">
+                    </div>
+                    <div class="centrar-texto">
+                        <a href="#" id="" class="btn-general realizar-consulta">Consultar</a>
+                        <a href="#" id="" class="btn-secundario cancelar">Regresar</a>
+                    </div>
+                </div>
+                <div class="estados">
+                    <table class="tabla">
+                        <caption>Estados del tramite</caption>
+                        <tr>
+                            <td>INICIADO</td>
+                            <td>Estado de inicio del tramite</td>
+                        </tr>
+                        <tr>
+                            <td>EN PROCESO</td>
+                            <td>Muestra el estado dividido en etapas del 1 al 6</td>
+                        </tr>
+                        <tr>
+                            <td>EN AGENCIA</td>
+                            <td>El DNI se encuentra en una agencia para recoger</td>
+                        </tr>
+                        <tr>
+                            <td>ENTREGADO</td>
+                            <td>El DNI ha sido recogido/entregado por el ciudadano</td>
+                        </tr>
+                        <tr>
+                            <td>OBSERVADO/ANULADO</td>
+                            <td>Cuando el tramite ha sido obserado y requiere que
+                                el ciudadano se apersone a la agencia donde lo realizo
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="enlaces">
+                <ul class="lista-enlaces">
+                    <li><a href="#">Servicios Online</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Sobre Nostros</a></li>
+                </ul>
+                <ul class="lista-enlaces">
+                    <li><a href="#">Ubicanos</a></li>
+                    <li><a href="#">Nuestros Horarios</a></li>
+                    <li><a href="#">Libro de reclamaciones</a></li>
+                </ul>
+            </div>
+            <img src="/src/img/logo.png" alt="">
+        </div>
+        <p>Registro Nacional de Identificacion y Estado Civil © 2022 . RENIEC</p>
+    </footer>
+    <script src="/js/main.js"></script>
+</body>
+</html>

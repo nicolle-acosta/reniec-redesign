@@ -21,36 +21,53 @@
         </ul>
     </header>
     <main>
-        <div class="devolucion-pagos-estado-3">
-            <h1>Consultas en Linea: Devolucion de Pagos</h1>
-            <p class="box">Ingrese los siguientes datos según corresponda:</p>
+        <div class="devolucion-pagos-estado-4">
+            <h1>Ingresar datos del Beneficiario:</h1>
             <div class="content">
-                <img src="../src/img/VOUCHER_1.png" alt="">
+                <div class="top">
+                    <div class="left">
+                        <h2>Datos Personales:</h2>
+                        <p>Solo el beneficiario podrá acercarse a cualquier agencia del Banco de la Nación a realizar el cobro</p>
+                    </div>
+                    <div class="right">
+                        <h2>Datos de Contacto:</h2>
+                        <p>Ingrese correctamente sus datos de contacto para notificarle el estado de su solicitud</p>
+                    </div>
+                </div>
                 <form action="#">
                     <div>
-                        <label for="recibo">NUM. RECIBO</label>
-                        <input type="text" name="recibo" id="recibo">
+                        <label for="nombre">Apellidos y Nombres</label>
+                        <input type="text" name="nombre" id="nombre">
                     </div>
                     <div>
-                        <label for="pago">FECHA DE PAGO</label>
-                        <input type="text" name="pago" id="pago">
+                        <label for="celular">Teléfono Celular:</label>
+                        <input type="tel" name="celular" id="celular">
                     </div>
                     <div>
-                        <label for="cajero">CÓDIGO DE CAJERO</label>
-                        <input type="text" name="cajero" id="cajero">
+                        <label for="dni">DNI</label>
+                        <input type="text" name="dni" id="dni">
                     </div>
                     <div>
-                        <label for="agencia">CÓDIGO DE AGENCIA</label>
-                        <input type="text" name="agencia" id="agencia">
+                        <label for="telefono">Teléfono de Domicilio:</label>
+                        <input type="tel" name="telefono" id="telefono">
+                    </div>
+                    <div>
+                        <label for="direccion">Dirección de Domicilio</label>
+                        <input type="text" name="direccion" id="direccion">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
                     </div>
                 </form>
+                
             </div>
         </div>
         
         <div class="botones">
-            <a class="btn-secondary" href="devolucion-pagos-estado-2.html">REGRESAR</a>
+            <a class="btn-secondary" href="devolucion-pagos-estado-3.html">REGRESAR</a>
             <a class="btn-primary" href="#">LIMPIAR DATOS</a>
-            <a class="btn-primary" href="devolucion-pagos-estado-4.html">SIGUIENTE</a>
+            <a class="btn-primary" href="devolucion-pagos-estado-final.html">SIGUIENTE</a>
         </div>
     </main>
     <footer>

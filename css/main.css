@@ -1070,6 +1070,17 @@ h1, h3{
     left: 800px;
     top: 160px;
 }
+@media (max-width:820px) {
+    .devolucion-pagos-estado-final div{
+        flex-direction: column;
+    }
+    .devolucion-pagos-estado-final .check{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+}
 /*devolucion-pagos-estado-3*/
 .devolucion-pagos-estado-3{
     display: flex;

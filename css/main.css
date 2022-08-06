@@ -1157,3 +1157,54 @@ h1, h3{
         flex-direction: column;
     }
 }
+/*devolucion-pagos-estado-5*/
+.devolucion-pagos-estado-5{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    max-width: 1140px;
+    gap: 30px;
+    padding: 2rem;
+    position: relative;
+}
+.devolucion-pagos-estado-5 .content{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    background-color: #D9D9D9;
+    gap: 2rem;
+}
+.devolucion-pagos-estado-5 .content .devolucion-pago form, .devolucion-pagos-estado-5 .content .lugar-pago form{
+    display: flex;
+    flex-direction: column;
+}
+.devolucion-pagos-estado-5 .content .motivo-pago form{
+    display: flex;
+    flex-direction: column;
+}
+.devolucion-pagos-estado-5 .content .motivo-pago form div{
+    display: flex;
+    gap: 20px;
+}
+.devolucion-pagos-estado-5 .content .motivo-pago form div input{
+    width: auto;
+}
+@media (max-width:820px) {
+    .devolucion-pagos-estado-5 .content{
+        flex-direction: column;
+    }
+}
+@media (max-width:620px) {
+    .devolucion-pagos-estado-5 .content .motivo-pago form div {
+       flex-wrap: wrap;
+       gap: 5px;
+       margin: 10px 0;
+       align-items: center;
+    }
+    .devolucion-pagos-estado-5 .content .motivo-pago form div label{
+        width: 80%;
+     }
+     .devolucion-pagos-estado-5 .content .motivo-pago form div input[type=text]{
+        width: 90%;
+     }
+}

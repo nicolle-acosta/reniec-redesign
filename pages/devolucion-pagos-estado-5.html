@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devolución de Pagos</title>
+    <link rel="stylesheet" href="../css/main.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-icono">
+            <a href="#"><img class="logo" src="../src/img/logo.png" alt="Logo RENIEC"></a>
+            <span class="mostrar-menu"><img src="/src/img/lista.png" style="width: 30px;" alt=""></span>
+        </div>
+        <ul class="nav-items">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="/">Servicios Online</a></li>
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="devolucion-pagos-estado-5">
+            <h1>Ingresar datos del Pago:</h1>
+            <div class="content">
+                <div class="left">
+                    <div class="devolucion-pago">
+                        <h3>Detalle de Devolución de pago:</h3>
+                        <form action="#">
+                            <label for="recibo">Monto del Recibo</label>
+                            <input type="text" name="recibo" id="recibo">
+                            <label for="gastos">Gastos Administrativos a cargo del Banco</label>
+                            <input type="text" name="gastos" id="gastos">
+                            <label for="total">Total a cobrar</label>
+                            <input type="text" name="total" id="total">
+                        </form>
+                    </div>
+                    <div class="lugar-pago">
+                        <h3>Lugar de Pago del Recibo:</h3>
+                        <form action="#">
+                            <label for="departamento">Departamento</label>
+                            <input type="text" name="departamento" id="departamento">
+                            <label for="provincia">Provincia</label>
+                            <input type="text" name="provincia" id="provincia">
+                            <label for="distrito">Distrito</label>
+                            <input type="text" name="distrito" id="distrito">
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="motivo-pago">
+                    <h3>Motivo de la devolución:</h3>
+                    <form action="#">
+                        <div>
+                            <input type="radio" id="codigo_tributo" name="motivo" value="codigo_tributo" checked>
+                            <label for="codigo_tributo">Tipo de trámite o código de Tributo consignado no es el correcto, debe ser:</label>
+                            <input type="text" name="codigo_tributo" id="codigo_tributo">
+                        </div>
+                        <div>
+                            <input type="radio" id="monto_pagar" name="motivo" value="monto_pagar" checked>
+                            <label for="monto_pagar">Monto a pagar no es el correcto, debe ser:</label>
+                            <input type="text" name="monto_pagar" id="monto_pagar">
+                        </div>
+                        <div>
+                            <input type="radio" id="exoneracion" name="motivo" value="exoneracion" checked>
+                            <label for="exoneracion">Exoneración por ser mayor de edad (60 años) y persona con discapacidad</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="documentos" name="motivo" value="documentos" checked>
+                            <label for="documentos">Documentos que se solicitaron no los emite la RENIEC</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="otros" name="motivo" value="otros" checked>
+                            <label for="otros">Otros motivos (detallar de forma breve y clara):</label>
+                            <input type="text" name="otros" id="otros">
+                        </div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="botones">
+            <a class="btn-secondary" href="devolucion-pagos-estado-4.html">REGRESAR</a>
+            <a class="btn-primary" href="#">LIMPIAR DATOS</a>
+            <a class="btn-primary" href="devolucion-pagos-estado-final.html">SIGUIENTE</a>
+        </div>
+    </main>
+    <footer>
+        <div class="contenedor-footer">
+            <div class="enlaces">
+                <ul class="lista-enlaces">
+                    <li><a href="#">Servicios Online</a></li>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Sobre Nostros</a></li>
+                </ul>
+                <ul class="lista-enlaces">
+                    <li><a href="#">Ubicanos</a></li>
+                    <li><a href="#">Nuestros Horarios</a></li>
+                    <li><a href="#">Libro de reclamaciones</a></li>
+                </ul>
+            </div>
+            <img src="/src/img/logo.png" alt="aquivaimagen">
+        </div>
+        <p>Registro Nacional de Identificacion y Estado Civil © 2022 . RENIEC</p>
+    </footer>
+    
+</body>
+</html>
